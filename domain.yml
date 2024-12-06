@@ -1,0 +1,97 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+  - place_order
+  - inform
+  - specify_quantity
+  - select_table
+  - order_menu_item
+  - ask_menu
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_menu_item:
+    - text: "What would you like to order?"
+
+  utter_ask_quantity:
+    - text: "How many of each item would you like?"
+
+  # utter_ask_table_number:
+  #   - text: "Here are the available tables: {tables_names}. Which table would you like to reserve?"
+
+  utter_confirm_order:
+    - text: "Your order has been placed!"
+
+
+
+
+
+entities:
+  - menu_item
+  - quantity
+  # - table_number
+
+slots:
+  menu_item:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: menu_item
+
+  quantity:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: quantity
+
+  # table_number:
+  #   type: float
+  #   mappings:
+  #     - type: from_entity
+  #       entity: table_number
+
+forms:
+  order_form:
+    required_slots:
+      - menu_item
+      - quantity
+      # - table_number
+
+
+actions:
+  - action_show_menu
+  - action_ask_food_and_quantity
+  # - action_show_available_tables
+  - action_generate_order_and_reservation
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

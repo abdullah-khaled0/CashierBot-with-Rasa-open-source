@@ -1,0 +1,6 @@
+rasa run actions
+rasa interactive
+uvicorn cashierBotForRestaurant.backend.main:app --reload
+rasa run --enable-api
+rasa train
+

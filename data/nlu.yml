@@ -1,0 +1,136 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+
+
+- intent: place_order
+  examples: |
+    - I want to place an order
+    - Can I order something?
+    - I need to order food
+
+- intent: order_menu_item
+  examples: |
+    - I want to order [pizza](menu_item) and [pasta](menu_item)
+    - I'd like [pasta](menu_item)
+    - I'll take [pasta](menu_item) and [sodas](menu_item)
+    - I want [pizza](menu_item) and [burgers](menu_item)
+    - Can I have a [pizza](menu_item)?
+    - I need a [salad](menu_item)
+    - Add [pasta](menu_item) to my order
+
+- intent: specify_quantity
+  examples: |
+    - I'd like [2 pizzas](quantity) and [1 pasta](quantity)
+    - Add [3 pasta](quantity) to my order
+    - I need [1 pizza](quantity)
+    - I'd like [1 pasta](quantity)
+    - Can I have [3 pasta](quantity)?
+    - I want [2 pizzas](quantity)
+    - I need [2 pizzas](quantity) and [1 pasta](quantity)
+
+- intent: select_table
+  examples: |
+    - I would like to reserve [Table 3](table_number)
+    - I’ll take [Table 1](table_number)
+    - Is [Table 5](table_number) available?
+    - Can I reserve [Table 2](table_number)?
+    - I want to book [Table 4](table_number)
+    
+- intent: ask_menu
+  examples: |
+    - What’s on the menu?
+    - Can I see the menu?
+    - Show me the available dishes
+    - What food do you have?
+

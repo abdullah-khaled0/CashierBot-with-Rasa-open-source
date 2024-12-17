@@ -4,6 +4,30 @@ An AI-powered chatbot built with **Rasa** to streamline order placement, table r
 
 ---
 
+
+## 📹 Demo
+![Demo](demo_gif.gif)
+> Check out the application in action!
+
+---
+
+## 🔄 System Flows
+
+### 1. Login and Registration Flow
+![Login Flow](Login.png)
+![Registration Flow](Registration.png)
+
+### 2. Chatbot Flowchart
+![Chatbot Flowchart](Chatbot_Flowchart.png)
+
+### 3. Chatbot Use Cases
+![Chatbot Use Cases](Chatbot.png)
+
+### 4. Database Design
+![Database Design](Database.png)
+
+---
+
 ## 📋 Features
 
 - **Order Management**:
